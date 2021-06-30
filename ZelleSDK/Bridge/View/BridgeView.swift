@@ -6,9 +6,8 @@
 
 import UIKit
 import WebKit
-import ContactsUI
 
-public class BridgeView: UIView, BridgeDelegate {
+public class BridgeView: UIView, BridgeDelegate, WKUIDelegate {
     
     public var webView: WKWebView?
     internal var config: BridgeConfig
@@ -33,8 +32,10 @@ public class BridgeView: UIView, BridgeDelegate {
     //common func to init our view
     private func setupView() {
         webView = WKWebView(frame: .zero, configuration: configureHandlers(for: self))
+        webView!.configuration.preferences.javaScriptEnabled = true
         addSubview(webView!)
         webView!.translatesAutoresizingMaskIntoConstraints = false
+        webView!.uiDelegate = self
 
         let constraints = [
             NSLayoutConstraint(item: webView!, attribute: .top,    relatedBy: .equal, toItem: self, attribute: .top,    multiplier: 1, constant: 0),
@@ -56,9 +57,59 @@ public class BridgeView: UIView, BridgeDelegate {
     public func evaluate(JS: String) {
         webView?.evaluateJavaScript(JS, completionHandler: nil)
     }
-}
+    
+    // callback methods
+    
+    public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping () -> Void) {
 
-extension BridgeView : CNContactPickerDelegate {
-    
-    
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            completionHandler()
+        }))
+
+        viewController.present(alertController, animated: true, completion: nil)
+    }
+
+
+    public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (Bool) -> Void) {
+
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            completionHandler(true)
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            completionHandler(false)
+        }))
+
+        viewController.present(alertController, animated: true, completion: nil)
+    }
+
+
+    public func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (String?) -> Void) {
+
+        let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: .actionSheet)
+
+        alertController.addTextField { (textField) in
+            textField.text = defaultText
+        }
+
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            if let text = alertController.textFields?.first?.text {
+                completionHandler(text)
+            } else {
+                completionHandler(defaultText)
+            }
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            completionHandler(nil)
+        }))
+
+        viewController.present(alertController, animated: true, completion: nil)
+    }
 }

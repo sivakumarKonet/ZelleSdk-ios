@@ -25,7 +25,7 @@ class LocationHandler: NSObject, WKScriptMessageHandler {
     func getLocation() {
         
 
-        self.bridgeView.evaluate(JS: "callbackLocation(location:\(""))")
+        self.bridgeView.evaluate(JS: "callbackLocation({location: '\("Location feature is in progress, Available Soon")'})")
         
     }
 }

@@ -23,6 +23,13 @@ class PhotosHandler: NSObject, WKScriptMessageHandler {
         }
     }
 
-    func takePhoto() {}
-    func selectFromPhotos() {}
+    func takePhoto() {
+        
+        self.bridgeView.evaluate(JS: "callbackPhoto({photo: '\("Photo feature is in progress, Available Soon")'})")
+        
+    }
+    func selectFromPhotos() {
+        
+        self.bridgeView.evaluate(JS: "callbackPhoto({photo: '\("Photo feature is in progress, Available Soon")'})")
+    }
 }

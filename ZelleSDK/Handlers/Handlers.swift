@@ -11,7 +11,7 @@ import WebKit
 func configureHandlers(for bridgeView: BridgeView) -> WKWebViewConfiguration {
     let config = WKWebViewConfiguration()
 
-    let contactsHandler = ContactsHandler(bridgeView: bridgeView)
+    let contactsHandler = ContactsHandler(bridgeView: bridgeView, viewController: bridgeView.viewController)
     config.userContentController.add(contactsHandler, name: "getContacts")
     config.userContentController.add(contactsHandler, name: "getOneContact")
 

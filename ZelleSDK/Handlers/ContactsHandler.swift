@@ -9,10 +9,12 @@ import WebKit
 import Contacts
 import ContactsUI
 
-class ContactsHandler: NSObject, WKScriptMessageHandler {
+class ContactsHandler: NSObject, WKScriptMessageHandler, CNContactPickerDelegate {
     var bridgeView: BridgeView
-    init(bridgeView: BridgeView) {
+    var viewController: UIViewController?
+    init(bridgeView: BridgeView, viewController: UIViewController?) {
         self.bridgeView = bridgeView
+        self.viewController = viewController
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -25,7 +27,8 @@ class ContactsHandler: NSObject, WKScriptMessageHandler {
     }
     
     func getContacts() {
-        let store = CNContactStore()
+        
+       /* let store = CNContactStore()
         do {
             let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactEmailAddressesKey] as [CNKeyDescriptor]
             let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
@@ -43,10 +46,18 @@ class ContactsHandler: NSObject, WKScriptMessageHandler {
             self.bridgeView.evaluate(JS: "contactCount(\(count))")
         } catch {
             print("Failed to fetch contact, error: \(error)")
-        }
+        } */
+                
+        self.bridgeView.evaluate(JS: "callbackContacts({contacts :' \("All contacts feature is in progress, Available Soon")'})")
+        
     }
     
     func getOneContact() {
+        
+        let contactPicker = CNContactPickerViewController()
+        
+        contactPicker.delegate = self
+        viewController?.present(contactPicker, animated: true, completion: nil)
         
 //        let store = CNContactStore()
 //        store.requestAccess(for: .contacts) { (granted, error) in
@@ -81,9 +92,25 @@ class ContactsHandler: NSObject, WKScriptMessageHandler {
 //                print("Permission denied")
 //            }
 //        }
+    }
+    
+    // Delegate methods
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+                
+        var firstName = contact.givenName
+        var lastName = contact.familyName
+        var name = firstName + " " + lastName
+        var phoneNumber = contact.phoneNumbers.first?.value.stringValue ?? ""
+        viewController?.dismiss(animated: true, completion: nil)
+        self.bridgeView.evaluate(JS: "callbackOneContact({contact :' \(name + "," + phoneNumber)'})")
+        print("Contact Selected")
+
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
         
-        let contactPicker = CNContactPickerViewController()
-        bridgeView.viewController.present(contactPicker, animated: true, completion: nil)
+        self.bridgeView.evaluate(JS: "callbackOneContact({contact :' \("User cancelled the request")'})")
     }
     
     

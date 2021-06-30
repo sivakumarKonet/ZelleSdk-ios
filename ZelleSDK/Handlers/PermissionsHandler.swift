@@ -22,5 +22,9 @@ class PermissionsHandler: NSObject, WKScriptMessageHandler {
         }
     }
 
-    func checkPermissions() {}
+    func checkPermissions() {
+        
+        self.bridgeView.evaluate(JS: "callbackPermissions({permission: '\("Check permissions feature is in progress, Available Soon")'})")
+        
+    }
 }
