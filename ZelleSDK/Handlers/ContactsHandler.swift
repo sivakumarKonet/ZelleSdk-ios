@@ -93,7 +93,7 @@ class ContactsHandler: NSObject, WKScriptMessageHandler, CNContactPickerDelegate
 ////        }
 //    }
     
-    private func showSettingsAlert(_ completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
+    func showSettingsAlert(_ completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
         let alert = UIAlertController(title: nil, message: "This app requires access to Contacts to proceed. Go to Settings to grant access.", preferredStyle: .alert)
         if
             let settings = URL(string: UIApplication.openSettingsURLString),
