@@ -35,36 +35,49 @@ class PhotosHandler: NSObject, WKScriptMessageHandler,UIImagePickerControllerDel
         
         
         let photos = PHPhotoLibrary.authorizationStatus()
-                 if photos == .notDetermined {
+               //  if photos == .notDetermined {
                      PHPhotoLibrary.requestAuthorization({status in
                          if status == .authorized{
                             
                          let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
                              alert.addAction(UIAlertAction(title: "takePhoto", style: .default, handler: { _ in
+                                 
+                                DispatchQueue.main.async {
+                                    self.Camera()
+                                }
 
-
-                             self.Camera()
+                           
                              }))
 
                          alert.addAction(UIAlertAction(title: "selectFromPhotos", style: .default, handler: { _ in
-
-                             self.Gallery()
+                            DispatchQueue.main.async {
+                                        self.Gallery()
+                                    }
+                            
 
                          }))
 
                          alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
 
-                         self.viewController?.present(alert, animated: true, completion: nil)
+                            DispatchQueue.main.async {
+                                self.viewController?.present(alert, animated: true, completion: nil)
+
+                            }
                       
                          } else {
+                            
+                            DispatchQueue.main.async {
+                                self.showSettingsAlerts { (Bool) in
+                                                             
+                                    }
+                            }
                           
-                          self.showSettingsAlerts { (Bool) in
-                              
-                          }
+                         
                          
                       }
                      })
-                 }
+              
+        
         
         
 
@@ -72,9 +85,11 @@ class PhotosHandler: NSObject, WKScriptMessageHandler,UIImagePickerControllerDel
     func selectFromPhotos() {
 
         //Photos
-
-           let photos = PHPhotoLibrary.authorizationStatus()
-           if photos == .notDetermined {
+        DispatchQueue.main.async {
+            
+        
+           //let photos = PHPhotoLibrary.authorizationStatus()
+          
                PHPhotoLibrary.requestAuthorization({status in
                    if status == .authorized{
                     self.Gallery()
@@ -87,7 +102,8 @@ class PhotosHandler: NSObject, WKScriptMessageHandler,UIImagePickerControllerDel
 
                 }
                })
-           }
+          // }
+        }
 
     }
     

@@ -23,6 +23,12 @@ class ShareHandler: NSObject, WKScriptMessageHandler {
         }
     }
 
-    func sharePhoto() {}
-    func shareText() {}
+    func sharePhoto() {
+        
+        
+    }
+    func shareText() {
+        
+        
+    }
 }

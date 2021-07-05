@@ -69,21 +69,29 @@ class QRCodeHandler: NSObject, WKScriptMessageHandler,UINavigationControllerDele
     
     func selectQRCodeFromPhotos() {
         
-        let photos = PHPhotoLibrary.authorizationStatus()
-                 if photos == .notDetermined {
+        DispatchQueue.main.async {
+            
                      PHPhotoLibrary.requestAuthorization({status in
                          if status == .authorized{
-                          self.Gallery()
+                            DispatchQueue.main.async {
+                                 self.Gallery()
+                            }
+                         
                       
                          } else {
-                          
-                          self.showSettingsAlerts { (Bool) in
-                              
-                          }
+                            DispatchQueue.main.async {
+                                self.showSettingsAlerts { (Bool) in
+                                                            
+                                                        }
+                                
+                            }
+                            
+                        
                          
                       }
                      })
-                 }
+                 
+        }
         
     }
     

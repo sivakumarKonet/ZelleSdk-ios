@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1D7955269340B200217C33 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D7954269340B200217C33 /* Contact.swift */; };
+		4A1D79F32693575D00217C33 /* QRCodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D79F12693575D00217C33 /* QRCodeHandler.swift */; };
+		4A1D79F42693575D00217C33 /* PhotosHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D79F22693575D00217C33 /* PhotosHandler.swift */; };
+		4A627DF8268F096B00AE3C78 /* ContactsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A627DF7268F096B00AE3C78 /* ContactsHandler.swift */; };
 		695F34C32689BC46004A8C47 /* ZelleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 695F34C12689BC46004A8C47 /* ZelleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		695F34D62689BCE6004A8C47 /* PopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34CE2689BCE6004A8C47 /* PopupHandler.swift */; };
 		695F34D72689BCE6004A8C47 /* Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34CF2689BCE6004A8C47 /* Handlers.swift */; };
-		695F34D82689BCE6004A8C47 /* QRCodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D02689BCE6004A8C47 /* QRCodeHandler.swift */; };
 		695F34D92689BCE6004A8C47 /* ShareHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D12689BCE6004A8C47 /* ShareHandler.swift */; };
 		695F34DA2689BCE6004A8C47 /* PermissionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D22689BCE6004A8C47 /* PermissionsHandler.swift */; };
-		695F34DB2689BCE6004A8C47 /* PhotosHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D32689BCE6004A8C47 /* PhotosHandler.swift */; };
 		695F34DC2689BCE6004A8C47 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D42689BCE6004A8C47 /* LocationHandler.swift */; };
-		695F34DD2689BCE6004A8C47 /* ContactsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34D52689BCE6004A8C47 /* ContactsHandler.swift */; };
 		695F34E02689BD03004A8C47 /* BridgeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34DE2689BD03004A8C47 /* BridgeConfig.swift */; };
 		695F34E12689BD03004A8C47 /* Zelle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34DF2689BD03004A8C47 /* Zelle.swift */; };
 		695F34E42689BD23004A8C47 /* BridgePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34E22689BD23004A8C47 /* BridgePopup.swift */; };
@@ -23,28 +24,27 @@
 		695F34E82689BD31004A8C47 /* BridgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34E62689BD31004A8C47 /* BridgeController.swift */; };
 		695F34E92689BD31004A8C47 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34E72689BD31004A8C47 /* Bridge.swift */; };
 		695F34EC2689C0D3004A8C47 /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 695F34EB2689C0D3004A8C47 /* QRCodeReader */; };
-		695F355A268DCF4F004A8C47 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F3559268DCF4F004A8C47 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1D7954269340B200217C33 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		4A1D79F12693575D00217C33 /* QRCodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeHandler.swift; sourceTree = "<group>"; };
+		4A1D79F22693575D00217C33 /* PhotosHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosHandler.swift; sourceTree = "<group>"; };
+		4A627DF7268F096B00AE3C78 /* ContactsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsHandler.swift; sourceTree = "<group>"; };
 		695F34BE2689BC45004A8C47 /* ZelleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZelleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		695F34C12689BC46004A8C47 /* ZelleSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZelleSDK.h; sourceTree = "<group>"; };
 		695F34C22689BC46004A8C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		695F34CE2689BCE6004A8C47 /* PopupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupHandler.swift; sourceTree = "<group>"; };
 		695F34CF2689BCE6004A8C47 /* Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handlers.swift; sourceTree = "<group>"; };
-		695F34D02689BCE6004A8C47 /* QRCodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeHandler.swift; sourceTree = "<group>"; };
 		695F34D12689BCE6004A8C47 /* ShareHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareHandler.swift; sourceTree = "<group>"; };
 		695F34D22689BCE6004A8C47 /* PermissionsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsHandler.swift; sourceTree = "<group>"; };
-		695F34D32689BCE6004A8C47 /* PhotosHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosHandler.swift; sourceTree = "<group>"; };
 		695F34D42689BCE6004A8C47 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
-		695F34D52689BCE6004A8C47 /* ContactsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsHandler.swift; sourceTree = "<group>"; };
 		695F34DE2689BD03004A8C47 /* BridgeConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeConfig.swift; sourceTree = "<group>"; };
 		695F34DF2689BD03004A8C47 /* Zelle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zelle.swift; sourceTree = "<group>"; };
 		695F34E22689BD23004A8C47 /* BridgePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePopup.swift; sourceTree = "<group>"; };
 		695F34E32689BD23004A8C47 /* BridgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeView.swift; sourceTree = "<group>"; };
 		695F34E62689BD31004A8C47 /* BridgeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeController.swift; sourceTree = "<group>"; };
 		695F34E72689BD31004A8C47 /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
-		695F3559268DCF4F004A8C47 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1D7953269340B200217C33 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4A1D7954269340B200217C33 /* Contact.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		695F34B42689BC45004A8C47 = {
 			isa = PBXGroup;
 			children = (
+				4A1D7953269340B200217C33 /* util */,
 				695F34C02689BC45004A8C47 /* ZelleSDK */,
 				695F34BF2689BC45004A8C47 /* Products */,
 			);
@@ -78,7 +87,6 @@
 		695F34C02689BC45004A8C47 /* ZelleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				695F3558268DAF63004A8C47 /* util */,
 				695F34C92689BC60004A8C47 /* Bridge */,
 				695F34CD2689BCB7004A8C47 /* Handlers */,
 				695F34C12689BC46004A8C47 /* ZelleSDK.h */,
@@ -127,24 +135,16 @@
 		695F34CD2689BCB7004A8C47 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				695F34D52689BCE6004A8C47 /* ContactsHandler.swift */,
 				695F34CF2689BCE6004A8C47 /* Handlers.swift */,
 				695F34D42689BCE6004A8C47 /* LocationHandler.swift */,
+				4A1D79F22693575D00217C33 /* PhotosHandler.swift */,
+				4A1D79F12693575D00217C33 /* QRCodeHandler.swift */,
 				695F34D22689BCE6004A8C47 /* PermissionsHandler.swift */,
-				695F34D32689BCE6004A8C47 /* PhotosHandler.swift */,
+				4A627DF7268F096B00AE3C78 /* ContactsHandler.swift */,
 				695F34CE2689BCE6004A8C47 /* PopupHandler.swift */,
-				695F34D02689BCE6004A8C47 /* QRCodeHandler.swift */,
 				695F34D12689BCE6004A8C47 /* ShareHandler.swift */,
 			);
 			path = Handlers;
-			sourceTree = "<group>";
-		};
-		695F3558268DAF63004A8C47 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				695F3559268DCF4F004A8C47 /* Contact.swift */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 695F34B82689BC45004A8C47 /* Build configuration list for PBXProject "ZelleSDK" */;
+			buildConfigurationList = 695F34B82689BC45004A8C47 /* Build configuration list for PBXProject "ZelleSDK copy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695F34D82689BCE6004A8C47 /* QRCodeHandler.swift in Sources */,
+				4A627DF8268F096B00AE3C78 /* ContactsHandler.swift in Sources */,
 				695F34DA2689BCE6004A8C47 /* PermissionsHandler.swift in Sources */,
 				695F34E92689BD31004A8C47 /* Bridge.swift in Sources */,
 				695F34E82689BD31004A8C47 /* BridgeController.swift in Sources */,
@@ -241,13 +241,13 @@
 				695F34E52689BD23004A8C47 /* BridgeView.swift in Sources */,
 				695F34D92689BCE6004A8C47 /* ShareHandler.swift in Sources */,
 				695F34D62689BCE6004A8C47 /* PopupHandler.swift in Sources */,
-				695F34DD2689BCE6004A8C47 /* ContactsHandler.swift in Sources */,
+				4A1D79F42693575D00217C33 /* PhotosHandler.swift in Sources */,
+				4A1D79F32693575D00217C33 /* QRCodeHandler.swift in Sources */,
 				695F34DC2689BCE6004A8C47 /* LocationHandler.swift in Sources */,
 				695F34E42689BD23004A8C47 /* BridgePopup.swift in Sources */,
 				695F34E02689BD03004A8C47 /* BridgeConfig.swift in Sources */,
-				695F355A268DCF4F004A8C47 /* Contact.swift in Sources */,
+				4A1D7955269340B200217C33 /* Contact.swift in Sources */,
 				695F34E12689BD03004A8C47 /* Zelle.swift in Sources */,
-				695F34DB2689BCE6004A8C47 /* PhotosHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +378,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JJMF9B2RYW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -403,8 +405,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JJMF9B2RYW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -426,7 +430,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		695F34B82689BC45004A8C47 /* Build configuration list for PBXProject "ZelleSDK" */ = {
+		695F34B82689BC45004A8C47 /* Build configuration list for PBXProject "ZelleSDK copy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				695F34C42689BC46004A8C47 /* Debug */,
