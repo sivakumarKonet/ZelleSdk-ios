@@ -23,6 +23,7 @@
 		695F34E82689BD31004A8C47 /* BridgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34E62689BD31004A8C47 /* BridgeController.swift */; };
 		695F34E92689BD31004A8C47 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F34E72689BD31004A8C47 /* Bridge.swift */; };
 		695F34EC2689C0D3004A8C47 /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 695F34EB2689C0D3004A8C47 /* QRCodeReader */; };
+		695F355A268DCF4F004A8C47 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F3559268DCF4F004A8C47 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		695F34E32689BD23004A8C47 /* BridgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeView.swift; sourceTree = "<group>"; };
 		695F34E62689BD31004A8C47 /* BridgeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeController.swift; sourceTree = "<group>"; };
 		695F34E72689BD31004A8C47 /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		695F3559268DCF4F004A8C47 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		695F34C02689BC45004A8C47 /* ZelleSDK */ = {
 			isa = PBXGroup;
 			children = (
+				695F3558268DAF63004A8C47 /* util */,
 				695F34C92689BC60004A8C47 /* Bridge */,
 				695F34CD2689BCB7004A8C47 /* Handlers */,
 				695F34C12689BC46004A8C47 /* ZelleSDK.h */,
@@ -134,6 +137,14 @@
 				695F34D12689BCE6004A8C47 /* ShareHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		695F3558268DAF63004A8C47 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				695F3559268DCF4F004A8C47 /* Contact.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				695F34DC2689BCE6004A8C47 /* LocationHandler.swift in Sources */,
 				695F34E42689BD23004A8C47 /* BridgePopup.swift in Sources */,
 				695F34E02689BD03004A8C47 /* BridgeConfig.swift in Sources */,
+				695F355A268DCF4F004A8C47 /* Contact.swift in Sources */,
 				695F34E12689BD03004A8C47 /* Zelle.swift in Sources */,
 				695F34DB2689BCE6004A8C47 /* PhotosHandler.swift in Sources */,
 			);
